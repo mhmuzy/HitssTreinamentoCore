@@ -18,9 +18,15 @@ namespace Projeto.Data.Mappings
             //chave primária
             builder.HasKey(f => f.IdFornecedor);
 
-            builder.Property(f => f.Nome);
-                //.HasColumnName("Nome")
-                //.Has
+            builder.Property(f => f.Nome)
+                .HasMaxLength(150)
+                .IsRequired();
+            //.HasColumnName("Nome")
+            //.Has
+
+            builder.Property(f => f.Cnpj)
+                .HasMaxLength(25)
+                .IsRequired();
         }
     }
 }
