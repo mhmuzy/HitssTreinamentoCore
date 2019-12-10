@@ -15,7 +15,12 @@ namespace Projeto.Data.Mappings
             //nome da tabela
             //builder.ToTable("Fornecedor");
 
+            //chave primária
             builder.HasKey(f => f.IdFornecedor);
+
+            builder.Property(f => f.Nome);
+                //.HasColumnName("Nome")
+                //.Has
         }
     }
 }
