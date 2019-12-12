@@ -28,22 +28,26 @@ namespace Projeto.Data.Repositories
 
         public void Excluir(int id)
         {
-            throw new NotImplementedException();
+            var obj = context.Set<T>().Find(id);
+
+            context.Entry(obj).State = EntityState.Deleted;
+            context.SaveChanges();
         }
 
         public void Inserir(T obj)
         {
-            throw new NotImplementedException();
+            context.Entry(obj).State = EntityState.Added;
+            context.SaveChanges();
         }
 
         public T ObterPorId(int id)
         {
-            throw new NotImplementedException();
+            return context.Set<T>().Find(id);
         }
 
         public List<T> ObterTodos()
         {
-            throw new NotImplementedException();
+            return context.Set<T>().ToList();
         }
     }
 }
