@@ -17,6 +17,9 @@ namespace Projeto.Services
                 <IProdutoAplicationServices, Projeto.Services.Services.Produto.ApplicationServices>();
             services.AddTransient
                 <IFornecedorApplicationServices, Projeto.Services.Services.Fornecedor.ApplicationServices>();
+
+            services.AddTransient
+                <IProdutoAplicationServices>();
         }
     }
 }

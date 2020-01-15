@@ -10,7 +10,7 @@ namespace Projeto.Services.Contracts.Services
     {
         void Inserir(TEntity entity);
         void Atualizar(TEntity entity);
-        void Excluir(TEntity entity);
+        void Excluir(int id);
 
         List<TEntity> GetEntities();
 

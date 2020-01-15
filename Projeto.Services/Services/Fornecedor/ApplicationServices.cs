@@ -41,7 +41,7 @@ namespace Projeto.Services.Services.Fornecedor
         public void Excluir(int id)
         {
             var fornecedor = domainService.GetEntityId(id);
-            domainService.Excluir(fornecedor);
+            domainService.Excluir(id);
         }
 
         public Consultar GetConsultarId(int id)

@@ -47,7 +47,7 @@ namespace Projeto.Services.Services.Produto
         public void Excluir(int id)
         {
             var produto = domainServices.GetEntityId(id);
-            domainServices.Excluir(produto);
+            domainServices.Excluir(id);
         }
 
         public void Inserir(Cadastro cadastro)
