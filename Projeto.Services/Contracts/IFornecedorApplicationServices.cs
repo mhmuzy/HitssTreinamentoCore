@@ -2,11 +2,11 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using Projeto.Services.Models.Produtos;
+using Projeto.Services.Models.Fornecedor;
 
 namespace Projeto.Services.Contracts
 {
-    public interface IProdutoAplicationServices :IDisposable
+    public interface IFornecedorApplicationServices : IDisposable
     {
         void Inserir(Cadastro cadastro);
 
@@ -16,6 +16,6 @@ namespace Projeto.Services.Contracts
 
         List<Consultar> consultars();
 
-        Consultar ConsultarPorId(int id);
+        Consultar GetConsultarId(int id);
     }
 }

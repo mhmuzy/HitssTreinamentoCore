@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Projeto.Data.Entities
 {
-    public class Produto
+    public class Produtos
     {
         public int IdProduto
         {

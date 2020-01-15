@@ -6,9 +6,9 @@ using System.ComponentModel.DataAnnotations;
 
 namespace Projeto.Services.Models.Produtos
 {
-    public class Cadastro
+    public class Editar
     {
-        [Required(ErrorMessage = "Nome obrigatório")]
+        [Required(ErrorMessage = "Nome Obrigatório")]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "Preço Obrigatório")]
@@ -16,7 +16,5 @@ namespace Projeto.Services.Models.Produtos
 
         [Required(ErrorMessage = "Quantidade Obrigatório")]
         public int Quantidade { get; set; }
-
-
     }
 }
