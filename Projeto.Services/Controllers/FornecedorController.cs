@@ -12,12 +12,12 @@ namespace Projeto.Presentation.Controllers
 {
     [Route("api[controller]")]
     [ApiController]
-    public class ProdutoController : ApiController
+    public class FornecedorController : ApiController
     {
         //atributo
-        private readonly IProdutoApplicationService service;
+        private readonly IFornecedorApplicationService service;
 
-        public ProdutoController(IProdutoApplicationService service)
+        public FornecedorController(IFornecedorApplicationService service)
         {
             this.service = service;
         }
@@ -32,7 +32,7 @@ namespace Projeto.Presentation.Controllers
             try
             {
                 service.Inserir(cadastrar);
-                return Ok($"Produto Cadastrado com Sucesso!");
+                return Ok($"Fornecedor Cadastrado com Sucesso!");
             }
             catch (Exception e)
             {
@@ -51,7 +51,7 @@ namespace Projeto.Presentation.Controllers
             try
             {
                 service.Atualizar(editar);
-                return OK("Produto atualizado com sucesso");
+                return OK("Fornecedor atualizado com sucesso");
             }
             catch (Exception e)
             {
@@ -94,7 +94,7 @@ namespace Projeto.Presentation.Controllers
             try
             {
                 service.Excluir(id);
-                return Ok("Produto excluído com sucesso.");
+                return Ok("Fornecedor excluído com sucesso.");
             }
             catch (Exception e)
             {

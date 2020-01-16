@@ -19,7 +19,17 @@ namespace Projeto.Services
                 <IFornecedorApplicationServices, Projeto.Services.Services.Fornecedor.ApplicationServices>();
 
             services.AddTransient
-                <IProdutoAplicationServices>();
+                <IProdutoAplicationServices, ProdutoDomainService>();
+            services.AddTransient
+                <IFornecedorApplicationServices, FornecedorDomainService>();
+
+            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+
+            services.AddTransient<IFornecedorRepository, FornecedorRepository>();
+
+            services.AddDbContext<DataContext>
+                (options => options.UseSqlServer
+                (Configurations.GetConnectionString("HitssTreinamentoCore")));
         }
     }
 }
