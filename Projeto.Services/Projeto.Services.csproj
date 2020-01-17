@@ -7,6 +7,7 @@
     <Win32Resource />
     <OutputType>Exe</OutputType>
     <StartupObject />
+    <NoWin32Manifest>true</NoWin32Manifest>
   </PropertyGroup>
 
   <ItemGroup>
