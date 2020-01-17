@@ -18,18 +18,18 @@ namespace Projeto.Services
             services.AddTransient
                 <IFornecedorApplicationServices, Projeto.Services.Services.Fornecedor.ApplicationServices>();
 
-            services.AddTransient
-                <IProdutoAplicationServices, ProdutoDomainService>();
-            services.AddTransient
-                <IFornecedorApplicationServices, FornecedorDomainService>();
+            //services.AddTransient
+            //    <IProdutoAplicationServices, ProdutoDomainService>();
+            //services.AddTransient
+            //    <IFornecedorApplicationServices, FornecedorDomainService>();
 
-            services.AddTransient<IProdutoRepository, ProdutoRepository>();
+            //services.AddTransient<IProdutoRepository, ProdutoRepository>();
 
-            services.AddTransient<IFornecedorRepository, FornecedorRepository>();
+            //services.AddTransient<IFornecedorRepository, FornecedorRepository>();
 
-            services.AddDbContext<DataContext>
-                (options => options.UseSqlServer
-                (Configurations.GetConnectionString("HitssTreinamentoCore")));
+            //services.AddDbContext<DataContext>
+            //    (options => options.UseSqlServer
+            //    (Configurations.GetConnectionString("HitssTreinamentoCore")));
         }
     }
 }

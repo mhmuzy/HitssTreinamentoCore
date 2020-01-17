@@ -55,5 +55,10 @@ namespace Projeto.Services.Services.Fornecedor
             var fornecedor = mapper.Map<Fornecedores>(cadastro);
             domainService.Inserir(fornecedor);
         }
+
+        public string ObterporId(int id)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

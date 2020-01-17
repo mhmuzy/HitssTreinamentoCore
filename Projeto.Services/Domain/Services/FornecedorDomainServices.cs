@@ -3,17 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 using Projeto.Data.Contracts;
+using Projeto.Data.Entities;
 
 namespace Projeto.Services.Domain.Services
 {
     public class FornecedorDomainServices
-        : BaseDomainService<Fornecedores>
+        //: BaseDomainService<Fornecedores>
     {
         private readonly IFornecedorRepository repository;
 
-        public FornecedorDomainServices(IFornecedorRepository repository)
-        {
-            this.repository = repository;
-        }
+        //public FornecedorDomainServices(IFornecedorRepository repository)
+        //{
+        //    this.repository = repository;
+        //}
     }
 }

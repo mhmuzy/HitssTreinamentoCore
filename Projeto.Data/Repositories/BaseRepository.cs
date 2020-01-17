@@ -12,42 +12,52 @@ namespace Projeto.Data.Repositories
         where T : class
     {
         //atributo
-        private readonly DataContext context;
+        //private readonly DataContext context;
 
         //construtor para injeção de dependência
-        public BaseRepository(DataContext context)
-        {
-            this.context = context;
-        }
+        //public BaseRepository(DataContext context)
+        //{
+        //    this.context = context;
+        //}
 
         public void Alterar(T obj)
         {
-            context.Entry(obj).State = EntityState.Modified;
-            context.SaveChanges();
+            //context.Entry(obj).State = EntityState.Modified;
+            //context.SaveChanges();
         }
 
         public void Excluir(int id)
         {
-            var obj = context.Set<T>().Find(id);
+            //var obj = context.Set<T>().Find(id);
 
-            context.Entry(obj).State = EntityState.Deleted;
-            context.SaveChanges();
+            //context.Entry(obj).State = EntityState.Deleted;
+            //context.SaveChanges();
         }
 
         public void Inserir(T obj)
         {
-            context.Entry(obj).State = EntityState.Added;
-            context.SaveChanges();
+            //context.Entry(obj).State = EntityState.Added;
+            //context.SaveChanges();
         }
 
         public T ObterPorId(int id)
         {
-            return context.Set<T>().Find(id);
+            throw new NotImplementedException();
         }
 
         public List<T> ObterTodos()
         {
-            return context.Set<T>().ToList();
+            throw new NotImplementedException();
         }
+
+        //public T ObterPorId(int id)
+        //{
+        //return context.Set<T>().Find(id);
+        //}
+
+        //public List<T> ObterTodos()
+        //{
+        //return context.Set<T>().ToList();
+        //}
     }
 }

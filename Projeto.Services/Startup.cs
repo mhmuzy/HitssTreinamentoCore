@@ -29,23 +29,23 @@ namespace Projeto.Services
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            DependencyResolver.Register(services, Configuration);
+            //DependencyResolver.Register(services, Configuration);
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
-            services.AddSwaggerGen(
-                swagger =>
-                {
-                    swagger.SwaggerDoc(
-                        new Info
-                        {
-                            Title = "API de Controle de Produtos",
-                            Version = "v1",
-                            Description = "Esse é o Treino do API Core"
-                        }
-                        );
-                }
-                );
+            //services.AddSwaggerGen(
+            //    swagger =>
+            //    {
+            //        swagger.SwaggerDoc(
+            //            new Info
+            //            {
+            //                Title = "API de Controle de Produtos",
+            //                Version = "v1",
+            //                Description = "Esse é o Treino do API Core"
+            //            }
+            //            );
+            //    }
+            //    );
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -57,13 +57,13 @@ namespace Projeto.Services
             }
 
             app.UseSwagger();
-            app.UseSwaggerUI(
-                swagger =>
-                {
-                    swagger.SwaggerEndpoint
-                    ("/swagger/v1/swagger.json", "Fornecimento de Produtos");
-                }
-                );
+            //app.UseSwaggerUI(
+            //    swagger =>
+            //    {
+            //        swagger.SwaggerEndpoint
+            //        ("/swagger/v1/swagger.json", "Fornecimento de Produtos");
+            //    }
+            //    );
 
             app.UseMvc();
         }

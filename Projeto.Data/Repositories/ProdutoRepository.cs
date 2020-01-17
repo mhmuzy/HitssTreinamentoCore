@@ -10,12 +10,12 @@ namespace Projeto.Data.Repositories
     public class ProdutoRepository
         : BaseRepository<Produto>, IProdutoRepository
     {
-        private readonly DataContext context;
+        //private readonly DataContext context;
 
-        public ProdutoRepository(DataContext context)
-            : base(context)
-        {
-            this.context = context;
-        }
+        //public ProdutoRepository(DataContext context)
+        //    : base(context)
+        //{
+        //    this.context = context;
+        //}
     }
 }
