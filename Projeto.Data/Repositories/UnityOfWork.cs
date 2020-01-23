@@ -9,22 +9,22 @@ namespace Projeto.Data.Repositories
     public class UnityOfWork : IUnityOfWork
     {
         //atributo
-        //private readonly DataContext context;
+        private readonly DataContext context;
 
         ////construtor para injeção de dependência
-        //public UnityOfWork(DataContext context)
-        //{
-        //    this.context = context;
-        //}
+        public UnityOfWork()
+        {
 
-        public IFornecedorRepository FornecedorRepository;
-        //=> new FornecedorRepository(context);
+        }
+
+        public IFornecedorRepository FornecedorRepository
+        => new FornecedorRepository();
 
         public IProdutoRepository ProdutoRepository;
 
         IFornecedorRepository IUnityOfWork.FornecedorRepository => throw new NotImplementedException();
 
-        IProdutoRepository IUnityOfWork.ProdutoRepository => throw new NotImplementedException();
-        //=> new ProdutoRepository(context);
+        IProdutoRepository IUnityOfWork.ProdutoRepository 
+        => new ProdutoRepository();
     }
 }

@@ -17,12 +17,12 @@ namespace Projeto.Data.Context
         }
         //REGRA 2) Sobrescrever o método OnModelCreating
         //e neste método adicionar cada classe de mapéamento
-        protected override void OnModelCreating(ModelBuilder modelBuilder)
-        {
+        //protected override void OnModelCreating(ModelBuilder modelBuilder)
+        //{
             //adicionar cada classe de mapeamento do projeto
-            modelBuilder.ApplyConfiguration(new FornecedorMap());
-            modelBuilder.ApplyConfiguration(new ProdutoMap());
-        }
+            //modelBuilder.ApplyConfiguration(new FornecedorMap());
+            //modelBuilder.ApplyConfiguration(new ProdutoMap());
+        //}
 
         //REGRA 3) Declarar uma property 'DbSet' para cada entidade do projeto
         public DbSet<Fornecedor> Fornecedor

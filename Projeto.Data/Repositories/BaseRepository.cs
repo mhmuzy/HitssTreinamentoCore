@@ -6,19 +6,20 @@ using Projeto.Data.Context;
 using Projeto.Data.Contracts;
 using System.Linq;
 
+
 namespace Projeto.Data.Repositories
 {
     public class BaseRepository<T> : IBaseRepository<T>
         where T : class
     {
         //atributo
-        //private readonly DataContext context;
+        private readonly DataContext Context;
 
         //construtor para injeção de dependência
-        //public BaseRepository(DataContext context)
-        //{
-        //    this.context = context;
-        //}
+        public BaseRepository()
+        {
+
+        }
 
         public void Alterar(T obj)
         {

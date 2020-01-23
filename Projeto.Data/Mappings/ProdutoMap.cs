@@ -8,25 +8,25 @@ using Projeto.Data.Entities;
 namespace Projeto.Data.Mappings
 {
     //classe de mapeamento para a entidade Produto
-    //public class ProdutoMap : IEntityTypeConfiguration<Produto>
-    //{
-        //public void Configure(EntityTypeBuilder<Produto> builder)
-        //{
+    public class ProdutoMap : IEntityTypeConfiguration<Produto>
+    {
+        public void Configure(EntityTypeBuilder<Produto> builder)
+        {
             //builder.ToTable("Produto");
 
-    //        builder.HasKey(p => p.IdProduto);
+            //        builder.HasKey(p => p.IdProduto);
 
-    //        builder.Property(p => p.IdProduto);
+            //        builder.Property(p => p.IdProduto);
 
-    //        builder.Property(p => p.Nome)
-    //            .HasMaxLength(150)
-    //            .IsRequired();
+            //        builder.Property(p => p.Nome)
+            //            .HasMaxLength(150)
+            //            .IsRequired();
 
-    //        builder.Property(p => p.Preco)
-    //            .IsRequired();
+            //        builder.Property(p => p.Preco)
+            //            .IsRequired();
 
-    //        builder.Property(p => p.Quantidade)
-    //            .IsRequired();
-    //    }
-    //}
+            //        builder.Property(p => p.Quantidade)
+            //            .IsRequired();
+        }
+    }
 }

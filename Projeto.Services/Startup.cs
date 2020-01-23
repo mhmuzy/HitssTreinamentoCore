@@ -11,7 +11,9 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using AutoMapper;
-using Swashbuckle.AspNetCore.Swagger; 
+using Swashbuckle.AspNetCore.Swagger;
+using AutoMapper.Configuration;
+using IConfiguration = AutoMapper.Configuration.IConfiguration;
 
 namespace Projeto.Services
 {

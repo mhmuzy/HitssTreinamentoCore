@@ -16,17 +16,17 @@ namespace Projeto.Data.Mappings
             //builder.ToTable("Fornecedor");
 
             //chave primária
-            builder.HasKey(f => f.IdFornecedor);
+            //builder.HasKey(f => f.IdFornecedor);
 
-            builder.Property(f => f.Nome)
-                .HasMaxLength(150)
-                .IsRequired();
+            //builder.Property(f => f.Nome)
+            //    .HasMaxLength(150)
+            //    .IsRequired();
             //.HasColumnName("Nome")
             //.Has
 
-            builder.Property(f => f.Cnpj)
-                .HasMaxLength(25)
-                .IsRequired();
+            //builder.Property(f => f.Cnpj)
+            //    .HasMaxLength(25)
+            //    .IsRequired();
         }
     }
 }

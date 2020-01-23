@@ -56,9 +56,16 @@ namespace Projeto.Services.Services.Fornecedor
             domainService.Inserir(fornecedor);
         }
 
-        public string ObterporId(int id)
+        public Consultar ObterporId(int id)
+        {
+            var fornecedor = domainService.GetEntityId(id);
+            return mapper.Map<Consultar>(fornecedor);
+        }
+
+        string IFornecedorApplicationServices.ObterporId(int id)
         {
             throw new NotImplementedException();
         }
+
     }
 }
