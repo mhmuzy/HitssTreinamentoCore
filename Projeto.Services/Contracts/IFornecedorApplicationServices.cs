@@ -17,6 +17,6 @@ namespace Projeto.Services.Contracts
         List<Consultar> consultars();
 
         Consultar GetConsultarId(int id);
-        string ObterporId(int id);
+        //string ObterporId(int id);
     }
 }

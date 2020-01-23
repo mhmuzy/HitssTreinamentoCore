@@ -13,9 +13,10 @@ namespace Projeto.Services.Domain.Services
     {
         private readonly IProdutoRepository repository;
 
-        //public ProdutoDomainService(IProdutoRepository repository)
-        //{
-        //    this.repository = repository;
-        //}
+        public ProdutoDomainService(IProdutoRepository repository)
+        {
+            this.repository = repository;
+        }
+
     }
 }

@@ -20,8 +20,8 @@ namespace Projeto.Data.Context
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
             //adicionar cada classe de mapeamento do projeto
-            //modelBuilder.ApplyConfiguration(new FornecedorMap());
-            //modelBuilder.ApplyConfiguration(new ProdutoMap());
+        //    modelBuilder.ApplyConfiguration(new FornecedorMap());
+        //    modelBuilder.ApplyConfiguration(new ProdutoMap());
         //}
 
         //REGRA 3) Declarar uma property 'DbSet' para cada entidade do projeto

@@ -9,5 +9,20 @@ namespace Projeto.Data.Context
         {
             throw new NotImplementedException();
         }
+
+        //public void ApplyConfiguration(FornecedorMap fornecedorMap)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        //public void ApplyConfiguration(FornecedorMap fornecedorMap)
+        //{
+        //    throw new NotImplementedException();
+        //}
+
+        public void ApplyConfiguration(ProdutoMap produtoMap)
+        {
+            throw new NotImplementedException();
+        }
     }
 }

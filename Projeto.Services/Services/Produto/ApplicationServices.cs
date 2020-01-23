@@ -39,11 +39,6 @@ namespace Projeto.Services.Services.Produto
             return mapper.Map<List<Consultar>>(lista);
         }
 
-        public void Dispose()
-        {
-            domainServices.Dispose();
-        }
-
         public void Excluir(int id)
         {
             var produto = domainServices.GetEntityId(id);
@@ -54,6 +49,11 @@ namespace Projeto.Services.Services.Produto
         {
             var produto = mapper.Map<Produtos>(cadastro);
             domainServices.Inserir(produto);
+        }
+
+        public void Dispose()
+        {
+            domainServices.Dispose();
         }
     }
 }

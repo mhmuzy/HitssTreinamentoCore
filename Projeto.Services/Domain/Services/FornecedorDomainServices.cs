@@ -11,10 +11,11 @@ namespace Projeto.Services.Domain.Services
         //: BaseDomainService<Fornecedores>
     {
         private readonly IFornecedorRepository repository;
-
+                
         //public FornecedorDomainServices(IFornecedorRepository repository)
         //{
         //    this.repository = repository;
         //}
+
     }
 }

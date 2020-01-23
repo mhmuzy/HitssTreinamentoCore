@@ -95,7 +95,7 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
-                return Ok(service.ObterporId(id));
+                return Ok(service.GetConsultarId(id).ToString());
             }
             catch (Exception e)
             {

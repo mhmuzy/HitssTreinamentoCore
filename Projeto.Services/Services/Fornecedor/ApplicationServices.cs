@@ -62,10 +62,10 @@ namespace Projeto.Services.Services.Fornecedor
             return mapper.Map<Consultar>(fornecedor);
         }
 
-        string IFornecedorApplicationServices.ObterporId(int id)
-        {
-            throw new NotImplementedException();
-        }
+        //string IFornecedorApplicationServices.ObterporId(int id)
+        //{
+        //    throw new NotImplementedException();
+        //}
 
     }
 }
