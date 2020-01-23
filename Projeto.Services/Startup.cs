@@ -29,7 +29,7 @@ namespace Projeto.Services
         {
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_2);
 
-            //DependencyResolver.Register(services, Configuration);
+            DependencyResolver.Register(services, Configuration);
 
             services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
