@@ -19,7 +19,7 @@ namespace Projeto.Data.Context
         //e neste método adicionar cada classe de mapéamento
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
         //{
-            //adicionar cada classe de mapeamento do projeto
+        //    //adicionar cada classe de mapeamento do projeto
         //    modelBuilder.ApplyConfiguration(new FornecedorMap());
         //    modelBuilder.ApplyConfiguration(new ProdutoMap());
         //}
