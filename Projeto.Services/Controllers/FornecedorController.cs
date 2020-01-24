@@ -62,7 +62,7 @@ namespace Projeto.Presentation.Controllers
             try
             {
                 service.Atualizar(editar);
-                return OK("Fornecedor atualizado com sucesso");
+                return OK($"Fornecedor atualizado com sucesso");
             }
             catch (Exception e)
             {

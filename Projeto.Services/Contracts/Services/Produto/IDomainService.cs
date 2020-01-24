@@ -9,5 +9,6 @@ namespace Projeto.Services.Contracts.Services.Produto
     public interface IDomainService
         : IBaseDomainService<Produtos>
     {
+
     }
 }

@@ -64,7 +64,7 @@ namespace Projeto.Presentation.Controllers
             try
             {
                 service.Atualizar(editar);
-                return OK("Produto atualizado com sucesso");
+                return OK($"Produto atualizado com sucesso");
             }
             catch (Exception e)
             {
@@ -117,7 +117,7 @@ namespace Projeto.Presentation.Controllers
             try
             {
                 service.Excluir(id);
-                return Ok("Produto excluído com sucesso.");
+                return Ok($"Produto excluído com sucesso.");
             }
             catch (Exception e)
             {

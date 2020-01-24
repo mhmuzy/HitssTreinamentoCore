@@ -17,12 +17,13 @@ namespace Projeto.Data.Repositories
 
         }
 
-        public IFornecedorRepository FornecedorRepository
-        => new FornecedorRepository();
+        public IFornecedorRepository FornecedorRepository;
+        //=> new FornecedorRepository();
 
         public IProdutoRepository ProdutoRepository;
 
-        IFornecedorRepository IUnityOfWork.FornecedorRepository => throw new NotImplementedException();
+        IFornecedorRepository IUnityOfWork.FornecedorRepository 
+            => throw new NotImplementedException();
 
         IProdutoRepository IUnityOfWork.ProdutoRepository 
         => new ProdutoRepository();

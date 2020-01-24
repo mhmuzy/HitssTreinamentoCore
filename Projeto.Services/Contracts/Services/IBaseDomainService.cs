@@ -9,7 +9,9 @@ namespace Projeto.Services.Contracts.Services
         where TEntity : class
     {
         void Inserir(TEntity entity);
+
         void Atualizar(TEntity entity);
+
         void Excluir(int id);
 
         List<TEntity> GetEntities();

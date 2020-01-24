@@ -34,7 +34,7 @@ namespace Projeto.Services
 
             services.AddTransient<IProdutoRepository, ProdutoRepository>();
 
-            services.AddTransient<IFornecedorRepository, FornecedorRepository>();
+            //services.AddTransient<IFornecedorRepository, FornecedorRepository>();
 
             //services.AddDbContext<DataContext>
             //    (options => options.UseSqlServer
