@@ -11,6 +11,7 @@ namespace Projeto.Data.Mappings
     public class ProdutoMap 
         : IEntityTypeConfiguration<Produto>
     {
+
         public void Configure(EntityTypeBuilder<Produto> builder)
         {
             //builder.ToTable("Produto");
@@ -29,5 +30,6 @@ namespace Projeto.Data.Mappings
             //builder.Property(p => p.Quantidade)
             //    .IsRequired();
         }
+
     }
 }

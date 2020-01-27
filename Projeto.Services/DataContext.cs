@@ -10,6 +10,7 @@ namespace Projeto.Data.Context
     //REGRA 1) Herdar DbContext
     public class DataContext : DbContext
     {
+
         public DataContext()
             : base()
         {
@@ -36,5 +37,6 @@ namespace Projeto.Data.Context
             get;
             set;
         }
+
     }
 }

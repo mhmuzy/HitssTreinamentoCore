@@ -19,6 +19,7 @@ namespace Projeto.Services
 {
     public class Startup
     {
+
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -69,5 +70,6 @@ namespace Projeto.Services
 
             app.UseMvc();
         }
+
     }
 }

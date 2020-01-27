@@ -6,6 +6,7 @@ namespace Projeto.Data.Entities
 {
     public class Fornecedores
     {
+
         public int IdFornecedor { get; set; }
 
         public string Nome { get; set; }
@@ -13,5 +14,6 @@ namespace Projeto.Data.Entities
         public string Cnpj { get; set; }
 
         public List<Produto> Produtos { get; set; }
+
     }
 }

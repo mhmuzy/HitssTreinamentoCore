@@ -8,6 +8,7 @@ namespace Projeto.Services.Models.Produtos
 {
     public class Cadastro
     {
+
         [Required(ErrorMessage = "Nome obrigatório")]
         public string Nome { get; set; }
 

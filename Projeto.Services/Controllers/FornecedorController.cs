@@ -13,7 +13,8 @@ namespace Projeto.Presentation.Controllers
 {
     [Route("api[controller]")]
     [ApiController]
-    public class FornecedorController : ApiControllerAttribute
+    public class FornecedorController 
+        : ApiControllerAttribute
     {
         //atributo
         private readonly IFornecedorApplicationServices service;
@@ -66,12 +67,14 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
-                return Ok(service.consultars().ToString());
+                string consulta = service.consultars().ToString();
+                return Ok(consulta);
             }
             catch (Exception e)
             {
-
-                return StatusCode(500, $"{e.Message}");
+                string message = e.Message;
+                int codigo = 500;
+                return StatusCode(codigo, $"{message}");
             }
         }
 
@@ -80,12 +83,14 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
-                return Ok(service.GetConsultarId(id).ToString());
+                string consulta = service.GetConsultarId(id).ToString();
+                return Ok(consulta);
             }
             catch (Exception e)
             {
-
-                return StatusCode(500, $"{e.Message}");
+                string message = e.Message;
+                int codigo = 500;
+                return StatusCode(codigo, $"{message}");
             }
         }
 
@@ -100,8 +105,9 @@ namespace Projeto.Presentation.Controllers
             }
             catch (Exception e)
             {
-
-                return StatusCode(500, $"{e.Message}");
+                string message = e.Message;
+                int codigo = 500;
+                return StatusCode(codigo, $"{message}");
             }
         }
     }

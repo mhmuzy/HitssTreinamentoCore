@@ -6,12 +6,14 @@ using Projeto.Data.Mappings;
 using Projeto.Data.Entities;
 using System.Reflection.Emit;
 using static Microsoft.AspNetCore.Hosting.Internal.HostingApplication;
+using Microsoft.AspNetCore;
 
 namespace Projeto.Data.Context
 {
     //REGRA 1) Herdar DbContext
-    public class DataContext2 //: Context
+    public class DataContext2 //: DBContext
     {
+
         //REGRA 2) Sobrescrever o método OnModelCreating
         //e neste método adicionar cada classe de mapéamento
         //protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -34,7 +36,6 @@ namespace Projeto.Data.Context
         //        get;
         //        set;
         //    }
-    }
 
-    
+    }
 }

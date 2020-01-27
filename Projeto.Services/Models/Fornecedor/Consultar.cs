@@ -7,8 +7,10 @@ namespace Projeto.Services.Models.Fornecedor
 {
     public class Consultar
     {
+
         public string Nome { get; set; }
 
         public string Cnpj { get; set; }
+
     }
 }

@@ -8,6 +8,7 @@ namespace Projeto.Services.Models.Produtos
 {
     public class Editar
     {
+
         [Required(ErrorMessage = "Nome Obrigatório")]
         public string Nome { get; set; }
 
@@ -16,5 +17,6 @@ namespace Projeto.Services.Models.Produtos
 
         [Required(ErrorMessage = "Quantidade Obrigatório")]
         public int Quantidade { get; set; }
+
     }
 }

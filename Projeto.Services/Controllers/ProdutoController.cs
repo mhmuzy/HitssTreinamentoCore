@@ -69,12 +69,14 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
-                return Ok(service.consultars().ToString());
+                string consulta = service.consultars().ToString();
+                return Ok(consulta);
             }
             catch (Exception e)
             {
-
-                return StatusCode(500, $"{e.Message}");
+                string message = e.Message;
+                int codigo = 500;
+                return StatusCode(codigo, $"{message}");
             }
         }
 
@@ -83,12 +85,14 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
-                return Ok(service.ConsultarPorId(id).ToString());
+                string consulta = service.ConsultarPorId(id).ToString();
+                return Ok(consulta);
             }
             catch (Exception e)
             {
-
-                return StatusCode(500, $"{e.Message}");
+                string message = e.Message;
+                int codigo = 500;
+                return StatusCode(codigo, $"{message}");
             }
         }
 
@@ -108,8 +112,9 @@ namespace Projeto.Presentation.Controllers
             }
             catch (Exception e)
             {
-
-                return StatusCode(500, $"{e.Message}");
+                string message = e.Message;
+                int codigo = 500;
+                return StatusCode(codigo, $"{message}");
             }
         }
     }

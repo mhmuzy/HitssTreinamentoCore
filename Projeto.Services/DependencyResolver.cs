@@ -17,6 +17,7 @@ namespace Projeto.Services
 {
     public class DependencyResolver
     {
+
         public static object Configuration { get; set; }
 
         public static void Register
@@ -52,5 +53,6 @@ namespace Projeto.Services
         {
             throw new NotImplementedException();
         }
+
     }
 }

@@ -7,7 +7,7 @@ using Projeto.Services.Models.Produtos;
 namespace Projeto.Services.Contracts
 {
     public interface IProdutoAplicationServices 
-        :IDisposable
+        : IDisposable
     {
 
         void Inserir(Cadastro cadastro);

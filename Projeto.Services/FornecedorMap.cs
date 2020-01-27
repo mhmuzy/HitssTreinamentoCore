@@ -11,6 +11,7 @@ namespace Projeto.Data.Mappings
     public class FornecedorMap 
         : IEntityTypeConfiguration<Fornecedor>
     {
+
         public void Configure(EntityTypeBuilder<Fornecedor> builder)
         {
             //nome da tabela
@@ -29,5 +30,6 @@ namespace Projeto.Data.Mappings
             //    .HasMaxLength(25)
             //    .IsRequired();
         }
+
     }
 }
