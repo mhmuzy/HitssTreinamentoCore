@@ -6,28 +6,12 @@ namespace Projeto.Data.Entities
 {
     public class Fornecedor
     {
-        public int IdFornecedor
-        {
-            get;
-            set;
-        }
+        public int IdFornecedor { get; set; }
 
-        public string Nome
-        {
-            get;
-            set;
-        }
+        public string Nome { get; set; }
 
-        public string Cnpj
-        {
-            get;
-            set;
-        }
+        public string Cnpj { get; set; }
 
-        public List<Produto> Produtos
-        {
-            get;
-            set;
-        }
+        public List<Produto> Produtos { get; set; }
     }
 }

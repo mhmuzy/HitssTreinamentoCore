@@ -10,7 +10,8 @@ using Projeto.Services.Contracts.Services.Fornecedor;
 
 namespace Projeto.Services.Services.Fornecedor
 {
-    public class ApplicationServices : IFornecedorApplicationServices
+    public class ApplicationServices 
+        : IFornecedorApplicationServices
     {
         //atributo
         private readonly IDomainService domainService;

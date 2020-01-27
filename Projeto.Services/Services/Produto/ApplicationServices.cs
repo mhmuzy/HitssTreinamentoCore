@@ -10,7 +10,8 @@ using Projeto.Data.Entities;
 
 namespace Projeto.Services.Services.Produto
 {
-    public class ApplicationServices : IProdutoAplicationServices
+    public class ApplicationServices 
+        : IProdutoAplicationServices
     {
         //atributo
         private readonly IDomainService domainServices;

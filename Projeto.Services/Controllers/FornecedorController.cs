@@ -18,6 +18,8 @@ namespace Projeto.Presentation.Controllers
         //atributo
         private readonly IFornecedorApplicationServices service;
 
+        public static object ModelState { get; private set; }
+
         public FornecedorController(IFornecedorApplicationServices service)
         {
             this.service = service;
@@ -27,20 +29,14 @@ namespace Projeto.Presentation.Controllers
         [Route("cadastrar")]
         public IActionResult Post(Cadastro cadastrar)
         {
-           //if (!FornecedorController.ModelState.IsValid)
-           //    return BadRequest();
-
-            try
-            {
-                service.Inserir(cadastrar);
-                return Ok($"Fornecedor Cadastrado com Sucesso!");
-            }
-            catch (Exception e)
-            {
-
-                return StatusCode(500, e.Message);
-            }
+            //if (!FornecedorController.ModelState)
+                return BadRequest();
             
+        }
+
+        private IActionResult BadRequest()
+        {
+            throw new NotImplementedException();
         }
 
         private IActionResult StatusCode(int v, string message)
@@ -57,18 +53,7 @@ namespace Projeto.Presentation.Controllers
         public IActionResult Put(Editar editar)
         {
             //if (!ModelState.IsValid)
-            //    return BadRequest();
-
-            try
-            {
-                service.Atualizar(editar);
-                return OK($"Fornecedor atualizado com sucesso");
-            }
-            catch (Exception e)
-            {
-
-                return StatusCode(500, e.Message);
-            }
+            return BadRequest();
         }
 
         private IActionResult OK(string v)
@@ -86,7 +71,7 @@ namespace Projeto.Presentation.Controllers
             catch (Exception e)
             {
 
-                return StatusCode(500, e.Message);
+                return StatusCode(500, $"{e.Message}");
             }
         }
 
@@ -100,7 +85,7 @@ namespace Projeto.Presentation.Controllers
             catch (Exception e)
             {
 
-                return StatusCode(500, e.Message);
+                return StatusCode(500, $"{e.Message}");
             }
         }
 
@@ -109,13 +94,14 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
+                string message = "Fornecedor excluído com sucesso.";
                 service.Excluir(id);
-                return Ok("Fornecedor excluído com sucesso.");
+                return Ok($"{message}");
             }
             catch (Exception e)
             {
 
-                return StatusCode(500, e.Message);
+                return StatusCode(500, $"{e.Message}");
             }
         }
     }

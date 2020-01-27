@@ -5,9 +5,10 @@ using System.Threading.Tasks;
 
 namespace Projeto.Services.Contracts.Services
 {
-    public interface IBaseDomainService<TEntity> : IDisposable
-        where TEntity : class
+    public interface IBaseDomainService<TEntity> 
+        : IDisposable where TEntity : class
     {
+
         void Inserir(TEntity entity);
 
         void Atualizar(TEntity entity);
@@ -17,5 +18,6 @@ namespace Projeto.Services.Contracts.Services
         List<TEntity> GetEntities();
 
         TEntity GetEntityId(int id);
+
     }
 }

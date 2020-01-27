@@ -15,10 +15,13 @@ namespace Projeto.Presentation.Controllers
 {
     [Route("api[controller]")]
     [ApiController]
-    public class ProdutoController : ApiControllerAttribute
+    public class ProdutoController 
+        : ApiControllerAttribute
     {
         //atributo
         private readonly IProdutoAplicationServices service;
+
+        public object ModelState { get; private set; }
 
         public ProdutoController(IProdutoAplicationServices service)
         {
@@ -30,19 +33,13 @@ namespace Projeto.Presentation.Controllers
         public IActionResult Post(Cadastro cadastrar)
         {
             //if (!ModelState.IsValid)
-            //    return BadRequest();
-
-            try
-            {
-                service.Inserir(cadastrar);
-                return Ok($"Produto Cadastrado com Sucesso!");
-            }
-            catch (Exception e)
-            {
-
-                return StatusCode(500, e.Message);
-            }
+            return BadRequest();
             
+        }
+
+        private IActionResult BadRequest()
+        {
+            throw new NotImplementedException();
         }
 
         private IActionResult StatusCode(int v, string message)
@@ -59,18 +56,7 @@ namespace Projeto.Presentation.Controllers
         public IActionResult Put(Editar editar)
         {
             //if (!ModelState.IsValid)
-            //    return BadRequest();
-
-            try
-            {
-                service.Atualizar(editar);
-                return OK($"Produto atualizado com sucesso");
-            }
-            catch (Exception e)
-            {
-
-                return StatusCode(500, e.Message);
-            }
+            return BadRequest();
         }
 
         private IActionResult OK(string v)
@@ -88,7 +74,7 @@ namespace Projeto.Presentation.Controllers
             catch (Exception e)
             {
 
-                return StatusCode(500, e.Message);
+                return StatusCode(500, $"{e.Message}");
             }
         }
 
@@ -102,7 +88,7 @@ namespace Projeto.Presentation.Controllers
             catch (Exception e)
             {
 
-                return StatusCode(500, e.Message);
+                return StatusCode(500, $"{e.Message}");
             }
         }
 
@@ -116,13 +102,14 @@ namespace Projeto.Presentation.Controllers
         {
             try
             {
+                string message = "Produto excluído com sucesso.";
                 service.Excluir(id);
-                return Ok($"Produto excluído com sucesso.");
+                return Ok($"{message}");
             }
             catch (Exception e)
             {
 
-                return StatusCode(500, e.Message);
+                return StatusCode(500, $"{e.Message}");
             }
         }
     }

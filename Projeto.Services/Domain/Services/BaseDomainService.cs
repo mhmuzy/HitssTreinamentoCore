@@ -8,8 +8,8 @@ using Projeto.Data.Contracts;
 
 namespace Projeto.Services.Domain.Services
 {
-    public class BaseDomainService<TEntity> : IBaseDomainService<TEntity>
-           where TEntity : class
+    public class BaseDomainService<TEntity> 
+        : IBaseDomainService<TEntity> where TEntity : class
     {
         //atributo
         private readonly IBaseRepository<TEntity> repository;

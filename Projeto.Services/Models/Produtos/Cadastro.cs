@@ -17,6 +17,5 @@ namespace Projeto.Services.Models.Produtos
         [Required(ErrorMessage = "Quantidade Obrigatório")]
         public int Quantidade { get; set; }
 
-
     }
 }

@@ -8,7 +8,8 @@ using Projeto.Data.Entities;
 namespace Projeto.Data.Mappings
 {
     // classe de mapeamentos para a entidade Fornecedor
-    public class FornecedorMap : IEntityTypeConfiguration<Fornecedor>
+    public class FornecedorMap 
+        : IEntityTypeConfiguration<Fornecedor>
     {
         public void Configure(EntityTypeBuilder<Fornecedor> builder)
         {

@@ -6,40 +6,16 @@ namespace Projeto.Data.Entities
 {
     public class Produto
     {
-        public int IdProduto
-        {
-            get;
-            set;
-        }
+        public int IdProduto { get; set; }
 
-        public string Nome
-        {
-            get;
-            set;
-        }
+        public string Nome { get; set; }
 
-        public decimal Preco
-        {
-            get;
-            set;
-        }
+        public decimal Preco { get; set; }
 
-        public int Quantidade
-        {
-            get;
-            set;
-        }
+        public int Quantidade { get; set; }
 
-        public int IdFornecedor
-        {
-            get;
-            set;
-        }
+        public int IdFornecedor { get; set; }
 
-        public Fornecedor Fornecedor
-        {
-            get;
-            set;
-        }
+        public Fornecedor Fornecedor { get; set; }
     }
 }

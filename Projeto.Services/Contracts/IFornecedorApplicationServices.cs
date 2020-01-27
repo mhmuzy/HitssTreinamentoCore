@@ -6,8 +6,10 @@ using Projeto.Services.Models.Fornecedor;
 
 namespace Projeto.Services.Contracts
 {
-    public interface IFornecedorApplicationServices : IDisposable
+    public interface IFornecedorApplicationServices 
+        : IDisposable
     {
+
         void Inserir(Cadastro cadastro);
 
         void Atualizar(Editar editar);
@@ -18,5 +20,6 @@ namespace Projeto.Services.Contracts
 
         Consultar GetConsultarId(int id);
         //string ObterporId(int id);
+
     }
 }

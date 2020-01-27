@@ -6,8 +6,10 @@ using Projeto.Services.Models.Produtos;
 
 namespace Projeto.Services.Contracts
 {
-    public interface IProdutoAplicationServices :IDisposable
+    public interface IProdutoAplicationServices 
+        :IDisposable
     {
+
         void Inserir(Cadastro cadastro);
 
         void Atualizar(Editar editar);
@@ -17,5 +19,6 @@ namespace Projeto.Services.Contracts
         List<Consultar> consultars();
 
         Consultar ConsultarPorId(int id);
+
     }
 }
