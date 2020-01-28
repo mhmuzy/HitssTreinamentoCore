@@ -6,8 +6,7 @@
     <ApplicationIcon></ApplicationIcon>
     <Win32Resource />
     <OutputType>Exe</OutputType>
-    <StartupObject />
-    <NoWin32Manifest>true</NoWin32Manifest>
+    <StartupObject>Projeto.Services.Program</StartupObject>
   </PropertyGroup>
 
   <ItemGroup>
