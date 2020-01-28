@@ -10,6 +10,8 @@ namespace Projeto.Services.Models.Fornecedor
     {
 
         [Required(ErrorMessage = "Nome Obrigatorio")]
+        [MaxLength(150, ErrorMessage = "O Nome deve conter no máximo {0} caracteres.")]
+        [MinLength(3, ErrorMessage = "O Nome deve conter no mínimo {0} caracteres.")]
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "CNPJ Obrigatorio")]

@@ -8,7 +8,8 @@ using Projeto.Data.Entities;
 namespace Projeto.Data.Context
 {
     //REGRA 1) Herdar DbContext
-    public class DataContext : DbContext
+    public class DataContext 
+        : DbContext
     {
 
         public DataContext()

@@ -11,7 +11,8 @@ using Microsoft.AspNetCore;
 namespace Projeto.Data.Context
 {
     //REGRA 1) Herdar DbContext
-    public class DataContext2 //: DBContext
+    public class DataContext2 
+        //: DBContext
     {
 
         //REGRA 2) Sobrescrever o método OnModelCreating
