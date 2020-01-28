@@ -9,14 +9,25 @@ using Projeto.Services;
 namespace Projeto.Services.Domain.Services
 {
     public class ProdutoDomainService
-        //: BaseDomainService<Produtos>
+        : BaseDomainService<Produtos>
     {
         private readonly IProdutoRepository repository;
 
-        public ProdutoDomainService(IProdutoRepository repository)
+        //public ProdutoDomainService(IProdutoRepository repository)
+        //{
+        //    this.repository = repository;
+        //}
+
+        public ProdutoDomainService(IBaseRepository<Produtos> repository) : base(repository)
         {
-            this.repository = repository;
+
         }
 
+        public override bool Equals(object obj)
+        {
+            var service = obj as ProdutoDomainService;
+            return service != null &&
+                   EqualityComparer<IProdutoRepository>.Default.Equals(repository, service.repository);
+        }
     }
 }

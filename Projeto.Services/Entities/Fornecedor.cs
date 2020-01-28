@@ -13,7 +13,7 @@ namespace Projeto.Data.Entities
 
         public string Cnpj { get; set; }
 
-        public List<Produto> Produtos { get; set; }
+        public List<Produtos> Produtos { get; set; }
 
     }
 }

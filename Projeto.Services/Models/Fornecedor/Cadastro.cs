@@ -15,6 +15,8 @@ namespace Projeto.Services.Models.Fornecedor
         public string Nome { get; set; }
 
         [Required(ErrorMessage = "CNPJ Obrigatorio")]
+        [MaxLength(14, ErrorMessage = "CNPJ aceita no máximo {0} caracteres.")]
+        [MinLength(14, ErrorMessage = "CNPJ aceita no mínimo {0} caracteres.")]
         public string Cnpj { get; set; }
 
     }

@@ -56,7 +56,7 @@ namespace Projeto.Presentation.Controllers
         public IActionResult Put(Editar editar)
         {
             //if (!ModelState.IsValid)
-            return BadRequest();
+                return BadRequest();
         }
 
         private IActionResult OK(string v)
