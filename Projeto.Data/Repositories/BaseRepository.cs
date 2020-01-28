@@ -9,8 +9,8 @@ using System.Linq;
 
 namespace Projeto.Data.Repositories
 {
-    public class BaseRepository<T> : IBaseRepository<T>
-        where T : class
+    public class BaseRepository<T> 
+        : IBaseRepository<T> where T : class
     {
         //atributo
         private readonly DataContext Context;

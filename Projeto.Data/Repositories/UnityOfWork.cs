@@ -6,12 +6,13 @@ using Projeto.Data.Contracts;
 
 namespace Projeto.Data.Repositories
 {
-    public class UnityOfWork : IUnityOfWork
+    public class UnityOfWork 
+        : IUnityOfWork
     {
         //atributo
         private readonly DataContext context;
 
-        ////construtor para injeção de dependência
+        //construtor para injeção de dependência
         public UnityOfWork()
         {
 

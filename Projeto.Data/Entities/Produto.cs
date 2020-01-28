@@ -16,6 +16,6 @@ namespace Projeto.Data.Entities
 
         public int IdFornecedor { get; set; }
 
-        public Fornecedor Fornecedor { get; set; }
+        //public Fornecedor Fornecedor { get; set; }
     }
 }
